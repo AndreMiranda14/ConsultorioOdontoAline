@@ -1,0 +1,74 @@
+.nav-link {
+  color: #02539c;
+  font-weight: bold;
+}
+.active {
+  color: #21bad0;
+}
+.nav-link:hover {
+  color: #21bad0;
+}
+
+.titulo {
+  padding-top: 140px;
+  color: #02539c;
+}
+
+.underline {
+  border-bottom: 4px solid #02539c;
+  width: 320px;
+  display: flex;
+}
+
+body {
+  position: relative;
+}
+
+#quemSomos {
+  padding-top: 120px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #21bad0;
+}
+
+.text {
+  color: #02539c;
+}
+
+#avalie:hover {
+  color: rgba(2, 83, 156,0.3)
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -100px;
+}
+
+.dropdown-item:active {
+  background-color: #21bad0;
+}
+
+#whatsapp{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:50px;
+  right:40px;
+  background-color:#21bad0;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index:1000;
+}
+
+#whatsapp:hover{
+  color: #000000;
+}
+
+footer {
+  box-shadow: 0px -10px 9px -3px rgba(0,0,0, .15);
+}
