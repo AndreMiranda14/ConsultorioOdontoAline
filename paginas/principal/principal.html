@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/paginas/principal/style_principal.css" />
+        <link rel="icon" type="/image/png" sizes="32x32" href="/images/favicons/colorido.png"/>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>  
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <title>Menu Principal</title>
+    </head>
+
+    <body>
+        <div class="container-2">
+            <img class="image" src="/images/Logotipo 72px.220px.svg" width="320" height="72" alt="Logomarca Consultório OdontoAline">
+            
+            <div class="form">
+                <span class="title">Selecione o formulário para edição</span>
+                <select class="form-select"  id="formSelect">
+                    <option selected></option>
+                    <option class="text" value="1">Atestado</option>
+                    <option class="text" value="2">Declaração de Comparecimento</option>
+                    <option class="text" value="3">Receituário</option>
+                    <option class="text" value="4">Recibo</option>
+                    <option class="text" value="5">Folha Timbrada</option>
+                </select>
+            </div>
+
+            <div class="input-field button">
+                <input type="submit" onclick="avancar(); return false" id="avancar" value="Avançar" required>
+            </div>
+        </div>
+        
+
+
+        <script src="/paginas/principal/script_principal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
+    </body>
+</html>
