@@ -1,3 +1,13 @@
+ // Função para definir a data atual no campo de data
+ function definirDataAtual() {
+    const campoData = document.getElementById('data');
+    const hoje = new Date().toISOString().split('T')[0]; // Obtém a data atual no formato YYYY-MM-DD
+    campoData.value = hoje;
+}
+
+// Chama a função quando a página carrega
+document.addEventListener('DOMContentLoaded', definirDataAtual);
+
 document.getElementById("print-button").addEventListener("click", function () {
     // Coletar os dados do formulário
     var titulo = document.getElementById("titulo").value;
@@ -15,6 +25,15 @@ document.getElementById("print-button").addEventListener("click", function () {
         const year = date.getFullYear();
     
         return `${day} de ${month} de ${year}`;
+    }
+
+    function escapeHtml(text) {
+        return text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/\n/g, '<br>')
+            .replace(/ {2}/g, '&nbsp;&nbsp;');
     }
 
     // Formatar a data
@@ -41,8 +60,8 @@ document.getElementById("print-button").addEventListener("click", function () {
                     padding: 0;
                 }
                 .container {
-                    width: 80vw;
-                    height: 80vh;
+                    width: 100vw;
+                    height: 100vh;
                     border-radius: 10px;
                     box-shadow: 5px 5px 3px rgba(0,0,0,0.4); 
                 }
@@ -69,13 +88,12 @@ document.getElementById("print-button").addEventListener("click", function () {
                     font-size: 16px; 
                     margin-top: 10px; 
                     text-align: justify;
-                    text-indent: 30px;
                     padding: 50px;
                 }
                 #imagem-fundo {
                     position: absolute;
                     background: url("/images/Timbrado/Background-png.svg") bottom right no-repeat;
-                    background-color: #fafafa;
+                    background-color: #fff;
                     background-size: 260px;
                 }
                 .assinatura{
@@ -97,9 +115,9 @@ document.getElementById("print-button").addEventListener("click", function () {
                     <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img">
                     <img src="/images/Timbrado/Endereco.svg" alt="Endereço" class="img">
                 </div>
-                <div class="title">${titulo}</div>
-                <div class="content">${texto}</div>
-                <div class="data">${formattedDate}</div>
+                        <div class="title">${escapeHtml(titulo)}</div>
+                        <div class="content">${escapeHtml(texto)}</div>
+                        <div class="data">${formattedDate}</div>
                 <div class="assinatura">
                     <img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura">
                 </div>
