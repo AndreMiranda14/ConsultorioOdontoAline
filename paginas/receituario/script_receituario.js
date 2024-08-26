@@ -77,7 +77,7 @@ document.getElementById("print-button").addEventListener("click", function () {
 
                 .name {
                     margin-top: 50px;
-                    font-size: 22px; 
+                    font-size: 18px; 
                     text-align: justify;
                     margin-left: 50px;
                     color: #0158a4;
@@ -98,7 +98,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                 }
 
                 .content {
-                    font-size: 20px; 
+                    font-size: 16px; 
                     margin-top: 5px; 
                     text-align: justify;
                     padding: 50px;
@@ -124,7 +124,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                     
                 .data{
                     text-align: center;
-                    font-size: 20px; 
+                    font-size: 16px; 
                     color: #0158a4;
                 }
 
@@ -139,7 +139,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                         <div class="title">Receituário</div>
                         <div class="name">${escapeHtml(nome)}</div>
                         <div class="content">${escapeHtml(receita)}</div>
-                        <div class="data">${formattedDate}</div>
+                        <div class="data">Belo Horizonte, ${formattedDate}</div>
                 <div class="assinatura">
                     <img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura">
                 </div>

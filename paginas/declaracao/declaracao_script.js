@@ -15,7 +15,6 @@ document.getElementById("print-button").addEventListener("click", function () {
     var data_tratamento = document.getElementById("data_tratamento").value;
     var hora_inicial = document.getElementById("hora_inicial").value;
     var hora_final = document.getElementById("hora_final").value;
-    var repouso = document.getElementById("repouso").value;
     var data = document.getElementById("data").value;
     
 
@@ -139,13 +138,12 @@ document.getElementById("print-button").addEventListener("click", function () {
                 <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img">
                 <img src="/images/Timbrado/Endereco-sm.svg" alt="Endereço" class="img">
             </div>
-                    <div class="title">Atestado</div>
+                    <div class="title">Declaração de Comparecimento</div>
 
                     <div class="content">
                         Declaro para os fins que ${escapeHtml(nome)} esteve em tratamento 
                         odontológico no dia ${escapeHtml(data_tratamento_formatada)}, 
-                        das ${escapeHtml(hora_inicial)} às ${escapeHtml(hora_final)} e 
-                        necessita de ${escapeHtml(repouso)} dias de repouso.
+                        das ${escapeHtml(hora_inicial)} às ${escapeHtml(hora_final)}.
                     </div>
 
                     <div class="data">Belo Horizonte, ${data_formatada}</div>
