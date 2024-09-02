@@ -54,6 +54,10 @@ body {
     width: 100%;
 }
 
+#result{
+    display: none;
+}
+
 .botao:hover{
     background: linear-gradient(90deg, #0c7788 0%, #013c6f 100%);
 }
