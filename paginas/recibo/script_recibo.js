@@ -1,76 +1,10 @@
 // Chama a função quando a página carrega
-document.addEventListener('DOMContentLoaded', definirDataAtual);
-
 function definirDataAtual() {
     const campoData = document.getElementById('data');
     const hoje = new Date().toISOString().split('T')[0]; // Obtém a data atual no formato YYYY-MM-DD
     campoData.value = hoje;
 }
-
-function convertNumberToWords(amount) {
-    const units = ["", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"];
-    const teens = ["dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"];
-    const tens = ["", "dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"];
-    const hundreds = ["", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"];
-    
-    const integerPart = Math.floor(amount);
-    const decimalPart = Math.round((amount - integerPart) * 100);
-
-    function integerToWords(num) {
-        let result = '';
-
-        if (num === 100) {
-            return 'cem';
-        } else if (num > 100) {
-            const hundred = Math.floor(num / 100);
-            const rest = num % 100;
-            result += hundreds[hundred];
-            if (rest > 0) result += ' e ' + integerToWords(rest);
-        } else if (num >= 20) {
-            const ten = Math.floor(num / 10);
-            const unit = num % 10;
-            result += tens[ten];
-            if (unit > 0) result += ' e ' + units[unit];
-        } else if (num >= 10) {
-            result += teens[num - 10];
-        } else if (num > 0) {
-            result += units[num];
-        }
-
-        return result;
-    }
-
-    let result = '';
-
-    if (integerPart > 1000) {
-        const thousand = Math.floor(integerPart / 1000);
-        const rest = integerPart % 1000;
-        if (thousand === 1) {
-            result += 'mil';
-        } else {
-            result += integerToWords(thousand) + ' mil';
-        }
-        if (rest > 0) result += ' ' + integerToWords(rest);
-    } else if (integerPart > 0) {
-        result += integerToWords(integerPart);
-    }
-
-    if (result.trim() === '') {
-        result = 'zero';
-    }
-
-    result += ' reais';
-
-    if (decimalPart > 0) {
-        result += ' e ' + integerToWords(decimalPart) + ' centavos';
-    } else if (decimalPart === 0 && integerPart === 0) {
-        result = 'zero reais';
-    } else {
-        result += ' ';
-    }
-
-    return result.charAt(0).toUpperCase() + result.slice(1);
-}
+document.addEventListener('DOMContentLoaded', definirDataAtual);
 
 document.getElementById("print-button").addEventListener("click", function () {
     // Coletar os dados do formulário
@@ -133,6 +67,72 @@ document.getElementById("print-button").addEventListener("click", function () {
         // Retorna o documento sem formatação se não for CPF nem CNPJ
         return documento;
     }
+
+    function convertNumberToWords(amount) {
+        const units = ["", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"];
+        const teens = ["dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"];
+        const tens = ["", "dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"];
+        const hundreds = ["", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"];
+        
+        const integerPart = Math.floor(amount);
+        const decimalPart = Math.round((amount - integerPart) * 100);
+    
+        function integerToWords(num) {
+            let result = '';
+    
+            if (num === 100) {
+                return 'cem';
+            } else if (num > 100) {
+                const hundred = Math.floor(num / 100);
+                const rest = num % 100;
+                result += hundreds[hundred];
+                if (rest > 0) result += ' e ' + integerToWords(rest);
+            } else if (num >= 20) {
+                const ten = Math.floor(num / 10);
+                const unit = num % 10;
+                result += tens[ten];
+                if (unit > 0) result += ' e ' + units[unit];
+            } else if (num >= 10) {
+                result += teens[num - 10];
+            } else if (num > 0) {
+                result += units[num];
+            }
+    
+            return result;
+        }
+    
+        let result = '';
+    
+        if (integerPart > 1000) {
+            const thousand = Math.floor(integerPart / 1000);
+            const rest = integerPart % 1000;
+            if (thousand === 1) {
+                result += 'mil';
+            } else {
+                result += integerToWords(thousand) + ' mil';
+            }
+            if (rest > 0) result += ' ' + integerToWords(rest);
+        } else if (integerPart > 0) {
+            result += integerToWords(integerPart);
+        }
+    
+        if (result.trim() === '') {
+            result = 'zero';
+        }
+    
+        result += ' reais';
+    
+        if (decimalPart > 0) {
+            result += ' e ' + integerToWords(decimalPart) + ' centavos';
+        } else if (decimalPart === 0 && integerPart === 0) {
+            result = 'zero reais';
+        } else {
+            result += ' ';
+        }
+    
+        return result.charAt(0).toUpperCase() + result.slice(1);
+    }
+    
 
     //Formata a data
     function formatDate(dateString) {
@@ -315,10 +315,11 @@ document.getElementById("print-button").addEventListener("click", function () {
         </div>
         
     </body>
-    </html>`;
+    </html>`
+    ;
 
     // Abrir uma nova janela e inserir o template
-    var printWindow = window.open("", "", "height=396,width=552");
+    var printWindow = window.open("", "", "height=500,width=1000");
     printWindow.document.open();
     printWindow.document.write(template);
     printWindow.document.close();
