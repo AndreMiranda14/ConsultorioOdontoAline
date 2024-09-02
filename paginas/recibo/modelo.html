@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>Imprimir</title>
+    <style>
+        @page {
+            size: 148mm 105mm;
+            margin: 0;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body { 
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 98vw;
+            height: 98vh;
+            border-radius: 10px;
+            border: 2px solid #0158a4;
+            box-shadow: 5px 5px 3px rgba(0,0,0,0.4);
+        }
+
+        .title {
+            font-size: 22px; 
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            color: #0158a4;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 30px 10px 30px;
+            align-items: center;
+        }
+
+        .recibo {
+            font-size: 30px; 
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #0158a4;
+            text-align: right;
+            margin: 0;
+        }
+        
+        .valor{
+            border: 3px solid #0158a4;
+            padding: 10px 10px 10px 40px;
+            font-size: 22px; 
+            color: #0158a4;  
+            border-radius: 10px; 
+            margin: 0;
+        }
+
+        .img{
+            display: inline;
+            width: 250px;
+            height: 130px;
+        }
+
+        #content {
+            font-size: 15px; 
+            display: flex;
+            padding: 0px 30px 0px 30px;
+            color: #0158a4;
+            text-align: justify;
+        }
+        
+        #imagem-fundo {
+            position: absolute;
+            background: url("/images/Timbrado/Background-png.svg") bottom right no-repeat;
+            background-color: #fff;
+            background-size: 240px;
+        }
+
+        #img-assinatura{
+            position: absolute;
+            width: 151px;
+            margin-left: 270px;
+        }
+            
+        #data{
+            margin: 30px 0px 15px 0px;
+            text-align: center;
+            font-size: 15px; 
+            color: #0158a4;
+        }
+        
+        #assinatura{
+            font-size: 15px; 
+            color: #0158a4;
+        }
+
+        #footer{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-left: 80px;
+        }
+
+        #endereco {
+            margin-top: 50px;
+            font-size: 12px; 
+            color: #0158a4;
+            text-align: center;
+            }
+
+        .instagram {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="container" id="imagem-fundo">
+            
+            <div class="row" id="header">
+                <div class="col-6" >
+                    <img src="/images/Timbrado/Logotipo-azul.svg" alt="Logotipo" class="img">
+                </div>
+                <div class="col-6">
+                    <p class="recibo">RECIBO</p>
+                    <p class="valor">R$ ${valorFormatado}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="content">
+                    Recebi de ${nome} CPF: ${documentoFormatado}
+                    a importância de ${valorExtenso}
+                    referente a(o) ${referente}
+                </div>
+                <div class="col-12" id="data"> 
+                    Belo Horizonte, ${dataFormatada}
+                </div>
+            </div>
+        
+            <div class="row" id="footer">
+                <div class="col-6" id="assinatura">
+                    <p>Assinatura e CPF/CNPJ: 067.113.256-30 </p>
+                </div>
+                <div class="col-6" id="img-assinatura">
+                    <p><img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura"></p>
+                </div>
+
+                
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="endereco">
+                    Rua Edson Luiz de Miranda, 167, lojas 1 e 2, Maria Goretti, BH/MG - CEP: 31930-490 <BR>
+                    Fone: (31) 3142-5141 | (31) 3646-6433 | (31) 98403-0911 
+                    <span class="instagram">instagram.com/consultorioodontoaline</span>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    </html>
