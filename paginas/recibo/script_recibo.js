@@ -88,7 +88,7 @@ document.getElementById("print-button").addEventListener("click", function () {
         resultElement.textContent = 'Por favor, insira um valor válido.';
         return;
     }
-    
+
     var valorExtenso = resultElement.textContent = convertNumberToWords(amount);
     
     // Formatar os valores
@@ -318,7 +318,7 @@ document.getElementById("print-button").addEventListener("click", function () {
     </html>`;
 
     // Abrir uma nova janela e inserir o template
-    var printWindow = window.open("", "", "height=800,width=1000");
+    var printWindow = window.open("", "", "height=396,width=552");
     printWindow.document.open();
     printWindow.document.write(template);
     printWindow.document.close();
