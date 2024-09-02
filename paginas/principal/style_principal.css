@@ -19,10 +19,15 @@ body {
     border-radius: 10px;
     box-shadow: 5px 5px 3px rgba(0,0,0,0.4);    
     padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .image {
     margin-bottom: 50px;
+    width: 320px;
+    height: 72px;
 }
 
 .title {
@@ -49,4 +54,10 @@ body {
 
 .button input:hover{
     background: linear-gradient(90deg, #0c7788 0%, #013c6f 100%);
+}
+
+@media screen and (max-width: 400px) {
+    .container-2 {
+        width: 90%;
+    }
 }
