@@ -73,7 +73,7 @@ body {
     background: linear-gradient(90deg, #0c7788 0%, #013c6f 100%);
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 660px) {
     .container2 {
         width: 90%;
         height: 85%;
@@ -86,7 +86,8 @@ body {
     }
 
     .form{
-        height: 75vh;
+        height: 550px;
+        align-content: center;
     }
 
     .margin4{
@@ -99,5 +100,13 @@ body {
 
     .formulario{
         margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .container2 {
+        width: 90%;
+        height: 85%;
+        padding: 20px;
     }
 }

@@ -63,7 +63,8 @@ body {
 @media screen and (max-width: 460px) {
     .container2 {
         width: 90%;
-        height: 86%;
+        height: 550px;
+        padding: 30px;
     }
 
     .font{
@@ -77,5 +78,11 @@ body {
     
     .margin3{
         margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container2 {
+        width: 90%;
     }
 }

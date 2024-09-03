@@ -63,7 +63,7 @@ body {
 @media screen and (max-width: 460px) {
     .container2 {
         width: 90%;
-        height: 90%;
+        height: 550px;
     }
 
     .font{
@@ -74,7 +74,15 @@ body {
     .margin4{
         margin-bottom: 30px;
     }
+    
+    .titulo{
+        text-align: center;
+        line-height: 22px;
+    }
+}
 
-    
-    
+@media screen and (max-width: 600px) {
+    .container2 {
+        width: 90%
+    }
 }
