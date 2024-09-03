@@ -56,7 +56,7 @@ body {
     background: linear-gradient(90deg, #0c7788 0%, #013c6f 100%);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 460px) {
     .container-2 {
         width: 90%;
     }
