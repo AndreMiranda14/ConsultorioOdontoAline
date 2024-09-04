@@ -248,7 +248,7 @@ document.getElementById("print-button").addEventListener("click", function () {
             }
 
 
-            .header {
+            .timbrado {
                 display: flex;
                 justify-content: left;  
                 background-color: #0158a4;
@@ -301,7 +301,7 @@ document.getElementById("print-button").addEventListener("click", function () {
     </head>
     <body>
         <div class="container" id="imagem-fundo">
-            <div class="header">
+            <div class="timbrado">
                 <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img">
                 <img src="/images/Timbrado/Endereco-sm.svg" alt="Endereço" class="img">
             </div>
