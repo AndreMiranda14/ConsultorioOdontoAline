@@ -45,12 +45,13 @@ body {
     border-radius: 10px;
     color:#fff;
     font-size: 15px;
-    padding: 6px;
+    padding: 10px;
     font-weight: 500;
     cursor: pointer;
     margin-top: 25px;
-    width: 100%;
+    width: 316px;
 }
+
 
 .button input:hover{
     background: linear-gradient(90deg, #0c7788 0%, #013c6f 100%);
