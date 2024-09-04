@@ -61,4 +61,8 @@ body {
     .container-2 {
         width: 90%;
     }
+
+    .button input{
+        width: 188px;
+    }
 }
