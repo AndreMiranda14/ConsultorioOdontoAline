@@ -18,6 +18,10 @@ document.getElementById("print-button").addEventListener("click", function () {
     var repouso = document.getElementById("repouso").value;
     var data = document.getElementById("data").value;
     
+    // Formatar a data
+    var data_formatada = formatDate(data);
+    var data_tratamento_formatada = formatDate(data_tratamento);
+    
 
     function formatDate(dateString) {
         const months = [
@@ -25,13 +29,15 @@ document.getElementById("print-button").addEventListener("click", function () {
             'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
         ];
         const date = new Date(dateString);
-        const day = date.getDate();
-        const month = months[date.getMonth()];
-        const year = date.getFullYear();
+    
+        // Use o método getUTCDate() se a data for no UTC ou ajuste conforme necessário
+        const day = date.getUTCDate();
+        const month = months[date.getUTCMonth()];
+        const year = date.getUTCFullYear();
     
         return `${day} de ${month} de ${year}`;
     }
-
+    
     function escapeHtml(text) {
         return text
             .replace(/&/g, '&amp;')
@@ -41,9 +47,6 @@ document.getElementById("print-button").addEventListener("click", function () {
             .replace(/ {2}/g, '&nbsp;&nbsp;');
     }
 
-    // Formatar a data
-    var data_formatada = formatDate(data);
-    var data_tratamento_formatada = formatDate(data_tratamento);
 
     // Criar o template de impressão
     var template = 
