@@ -16,7 +16,7 @@
         <span class="titulo">Atestado</span>
         <div class="container2">
             <div class="form">
-                <div class="row justify-content-center margin4">
+                <div class="row justify-content-center margin3">
                     <div class="col-12">
                     <label for="nome" class="form-label font">Nome do Paciente</label>
                         <input type="text" class="form-control" id="nome" placeholder="">
@@ -38,8 +38,8 @@
                         <input type="time" class="form-control" id="hora_final" placeholder=""> 
                     </div>
                 </div>
-
-                <div class="row justify-content-center margin4">
+    
+                <div class="row justify-content-center margin3">
                     <div class="col-12">
                         <label for="repouso" class="form-label font">Dias de Repouso</label>
                         <select class="form-select" aria-label="Default select example" id="repouso">
@@ -54,7 +54,20 @@
                         </select>
                     </div>
                 </div>
-
+    
+                <div class="row justify-content-center margin3">
+                    <div class="col-6" id="campoCID">
+                        <label for="CID-filter" class="form-label font">Filtrar CID</label>
+                        <input type="text" class="form-control" id="CID-filter" placeholder="Digite para filtrar...">
+                    </div>
+                    <div class="col-6">
+                        <label for="CID" class="form-label font">CID</label>
+                        <select class="form-select" aria-label="Default select example" id="CID">
+                            <!-- Opções serão adicionadas pelo JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <label for="data" class="form-label font">Data</label>
