@@ -215,7 +215,7 @@ document.getElementById("print-button").addEventListener("click", function () {
     var template = 
     `<html>
     <head>
-        <title>Imprimir</title>
+        <title>Atestado ${escapeHtml(nome)}</title>
         <style>
             @page {
                 size: A5;

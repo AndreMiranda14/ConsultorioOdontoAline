@@ -154,7 +154,7 @@ document.getElementById("print-button").addEventListener("click", function () {
     var template = 
     `<html>
 <head>
-    <title>Imprimir</title>
+    <title>Recibo ${nome}</title>
     <style>
         @page {
             size: 148mm 105mm;
