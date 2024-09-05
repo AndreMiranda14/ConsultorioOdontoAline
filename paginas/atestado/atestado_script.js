@@ -235,8 +235,6 @@ document.getElementById("print-button").addEventListener("click", function () {
             .container {
                 width: 100vw;
                 height: 100vh;
-                border-radius: 10px;
-                box-shadow: 5px 5px 3px rgba(0,0,0,0.4); 
             }
 
             .title {

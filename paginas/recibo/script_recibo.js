@@ -175,8 +175,6 @@ document.getElementById("print-button").addEventListener("click", function () {
             width: 98vw;
             height: 98vh;
             border-radius: 10px;
-            border: 2px solid #0158a4;
-            box-shadow: 5px 5px 3px rgba(0,0,0,0.4);
         }
 
         .title {
