@@ -66,14 +66,17 @@ body {
     }
 
     .container2 {
-        width: 90%;
-        height: 550px;
-        padding: 30px;
+        height: 570px;
+        padding: 20px;
     }
 
     .font{
         font-size: 15px;
         font-weight: 600;
+    }
+
+    .form{
+        padding-top: 10px;
     }
 
     .margin4{

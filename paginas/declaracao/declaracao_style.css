@@ -66,6 +66,10 @@ body {
         height: 550px;
     }
 
+    body{
+        height: 85vh;
+    }
+
     .font{
         font-size: 15px;
         font-weight: 600;

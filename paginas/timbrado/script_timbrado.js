@@ -95,7 +95,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                     width: 450px;
                     height: 88px;
                     position: absolute;
-                    margin: 55px 0px 55px 510px;
+                    margin: 55px 0px 55px 505px;
                 }
                         
                 .background {

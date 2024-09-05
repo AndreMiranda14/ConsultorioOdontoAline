@@ -73,7 +73,11 @@ body {
     background: linear-gradient(90deg, #0c7788 0%, #013c6f 100%);
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 770px) {
+    body{
+        height: 85vh;
+    }
+    
     .container2 {
         width: 90%;
         height: 85%;
@@ -103,10 +107,36 @@ body {
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (min-height: 914px) {
+    body{
+        height: 85vh;
+    }
+    
     .container2 {
         width: 90%;
-        height: 85%;
+        height: 75%;
         padding: 20px;
+    }
+
+    .font{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .form{
+        height: 550px;
+        align-content: center;
+    }
+
+    .margin4{
+        margin-bottom: 30px;
+    }
+    
+    #receita{
+        height: 180px;
+    }
+
+    .formulario{
+        margin-top: 15px;
     }
 }

@@ -274,7 +274,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                 width: 275px;
                 height: 130px;
                 position: absolute;
-                margin-left: 285px;
+                margin-left: 280px;
             }
 
             .content {

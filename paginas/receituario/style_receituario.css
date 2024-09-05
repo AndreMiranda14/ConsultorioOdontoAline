@@ -66,6 +66,10 @@ body {
 }
 
 @media screen and (max-width: 460px) {
+    body{
+        height: 80vh;
+    }
+
     .container2 {
         width: 90%;
         height: 550px;
@@ -93,6 +97,6 @@ body {
 @media screen and (max-width: 770px) {
     .container2 {
         width: 90%;
-        padding: 80px;
+        padding: 20px;
     }
 }
