@@ -271,7 +271,7 @@ document.getElementById("print-button").addEventListener("click", function () {
             
             .img2{
                 display: block;
-                width: 275px;
+                width: 270px;
                 height: 130px;
                 position: absolute;
                 margin-left: 275px;
