@@ -38,6 +38,10 @@ body {
   background-color: #21bad0;
 }
 
+#logotipo{
+padding-right: 15px;
+}
+
 .text {
   color: #02539c;
 }
