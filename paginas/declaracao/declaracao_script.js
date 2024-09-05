@@ -82,23 +82,38 @@ document.getElementById("print-button").addEventListener("click", function () {
                 color: #0158a4;
             }
 
-
             .header {
-                display: flex;
-                justify-content: left;  
-                background-color: #0158a4;
                 margin-bottom: 25px;
-                border-radius: 10px 10px 0 0;
             }
 
-            .img{
-                display: inline;
+            .img_bg{
+                width: 275px;
+                height: 130px;  
+            }
+
+            .background{
+                display: flex;
+                margin-top: 0;
+                position: static;
+            }
+
+            .img1{
+                display: block;
                 width: 275px;
                 height: 130px;
+                position: absolute;
+            }
+            
+            .img2{
+                display: block;
+                width: 275px;
+                height: 130px;
+                position: absolute;
+                margin-left: 285px;
             }
 
             .content {
-                font-size: 18px; 
+                font-size: 18px;
                 margin-top: 5px; 
                 display: flex;
                 padding: 50px;
@@ -107,11 +122,11 @@ document.getElementById("print-button").addEventListener("click", function () {
                 text-align: justify;
             }
             
-            #imagem-fundo {
+            .imagem_fundo {
                 position: absolute;
-                background: url("/images/Timbrado/Background-png.svg") bottom right no-repeat;
-                background-color: #fff;
-                background-size: 260px;
+                width: 260px;
+                z-index: -1;
+                margin: 250px 0px 0px 313px;
             }
 
             .assinatura{
@@ -126,7 +141,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                 
             .data{
                 text-align: center;
-                font-size: 16px; 
+                font-size: 18px;
                 color: #0158a4;
             }
             
@@ -135,23 +150,32 @@ document.getElementById("print-button").addEventListener("click", function () {
         </style>
     </head>
     <body>
-        <div class="container" id="imagem-fundo">
+        <div class="container">
             <div class="header">
-                <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img">
-                <img src="/images/Timbrado/Endereco-sm.svg" alt="Endereço" class="img">
+                <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img1">
+                <img src="/images/Timbrado/Endereco-sm.svg" alt="Endereço" class="img2">
+                <img src="/images/Timbrado/fundo_azul.svg" alt="Logotipo" class="background">
             </div>
-                    <div class="title">Declaração de Comparecimento</div>
+            
+            <div>
+                <img src="/images/Timbrado/Background-png.svg" alt="imagem de fundo" class="imagem_fundo">
+            </div>
 
-                    <div class="content">
-                        Declaro para os fins que ${escapeHtml(nome)} esteve em tratamento 
-                        odontológico no dia ${escapeHtml(data_tratamento_formatada)}, 
-                        das ${escapeHtml(hora_inicial)} às ${escapeHtml(hora_final)}.
-                    </div>
+            <div class="title">Declaração de Comparecimento</div>
 
-                    <div class="data">Belo Horizonte, ${data_formatada}</div>
+            <div class="content">
+                Declaro para os fins que ${escapeHtml(nome)} esteve em tratamento 
+                odontológico no dia ${escapeHtml(data_tratamento_formatada)}, 
+                das ${escapeHtml(hora_inicial)} às ${escapeHtml(hora_final)}.
+            </div>
+
+
+            <div class="data">Belo Horizonte, ${data_formatada}</div>
+
             <div class="assinatura">
                 <img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura">
             </div>
+
         </div>
     </body>
 </html>`;

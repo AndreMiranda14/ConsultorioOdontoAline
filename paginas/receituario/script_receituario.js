@@ -62,6 +62,7 @@ document.getElementById("print-button").addEventListener("click", function () {
                     margin: 0;
                     padding: 0;
                 }
+
                 .container {
                     width: 100vw;
                     height: 100vh;
@@ -86,17 +87,41 @@ document.getElementById("print-button").addEventListener("click", function () {
                 }
 
                 .header {
-                    display: flex;
-                    justify-content: left;  
-                    background-color: #0158a4;
                     margin-bottom: 25px;
-                    border-radius: 10px 10px 0 0;
                 }
-    
-                .img{
-                    display: inline;
+
+                .img_bg{
+                    width: 275px;
+                    height: 130px;  
+                }
+
+                .background{
+                    display: flex;
+                    margin-top: 0;
+                    position: static;
+                }
+
+                .img1{
+                    display: block;
                     width: 275px;
                     height: 130px;
+                    position: absolute;
+                }
+                
+                .img2{
+                    display: block;
+                    width: 275px;
+                    height: 130px;
+                    position: absolute;
+                    margin-left: 285px;
+                }
+
+                .imagem_fundo {
+                    position: absolute;
+                    width: 260px;
+                    z-index: -10;
+                    margin: 250px 0px 0px 313px;
+                    display: flex;
                 }
 
                 .content {
@@ -105,13 +130,6 @@ document.getElementById("print-button").addEventListener("click", function () {
                     text-align: justify;
                     padding: 50px;
                     color: #0158a4;
-                }
-
-                #imagem-fundo {
-                    position: absolute;
-                    background: url("/images/Timbrado/Background-png.svg") bottom right no-repeat;
-                    background-color: #fff;
-                    background-size: 260px;
                 }
 
                 .assinatura{
@@ -133,15 +151,22 @@ document.getElementById("print-button").addEventListener("click", function () {
             </style>
         </head>
         <body>
-            <div class="container" id="imagem-fundo">
+            <div class="container">
                 <div class="header">
-                    <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img">
-                    <img src="/images/Timbrado/Endereco-sm.svg" alt="Endereço" class="img">
+                    <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img1">
+                    <img src="/images/Timbrado/Endereco-sm.svg" alt="Endereço" class="img2">
+                    <img src="/images/Timbrado/fundo_azul.svg" alt="Logotipo" class="background">
                 </div>
-                        <div class="title">Receituário</div>
-                        <div class="name">${escapeHtml(nome)}</div>
-                        <div class="content">${escapeHtml(receita)}</div>
-                        <div class="data">Belo Horizonte, ${formattedDate}</div>
+                <div>
+                    <img src="/images/Timbrado/Background-png.svg" alt="imagem de fundo" class="imagem_fundo">
+                </div>
+                
+                <div class="title">Receituário</div>
+                <div class="name">${escapeHtml(nome)}</div>
+                <div class="content">${escapeHtml(receita)}</div>
+                <div class="data">Belo Horizonte, ${formattedDate}</div>
+
+
                 <div class="assinatura">
                     <img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura">
                 </div>

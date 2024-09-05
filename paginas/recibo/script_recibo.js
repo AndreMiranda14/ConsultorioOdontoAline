@@ -226,11 +226,11 @@ document.getElementById("print-button").addEventListener("click", function () {
             text-align: justify;
         }
         
-        #imagem-fundo {
+        .imagem_fundo {
             position: absolute;
-            background: url("/images/Timbrado/Background-png.svg") bottom right no-repeat;
-            background-color: #fff;
-            background-size: 240px;
+            width: 240px;
+            z-index: -1;
+            margin: 0px 0px 0px 313px;
         }
 
         #img-assinatura{
@@ -259,7 +259,8 @@ document.getElementById("print-button").addEventListener("click", function () {
         }
 
         #endereco {
-            margin-top: 50px;
+            margin: 205px 0px 0px 7px;
+            position: absolute;
             font-size: 12px; 
             color: #0158a4;
             text-align: center;
@@ -273,15 +274,28 @@ document.getElementById("print-button").addEventListener("click", function () {
         </style>
     </head>
     <body>
-        <div class="container" id="imagem-fundo">
-            
+        <div class="container">
+            <div>
+                <img src="/images/Timbrado/Background-png.svg" alt="imagem de fundo" class="imagem_fundo">
+            </div>
+        
             <div class="row" id="header">
                 <div class="col-6" >
                     <img src="/images/Timbrado/Logotipo-azul.svg" alt="Logotipo" class="img">
                 </div>
+
+
                 <div class="col-6">
                     <p class="recibo">RECIBO</p>
                     <p class="valor">R$ ${valorFormatado}</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12" id="endereco">
+                    Rua Edson Luiz de Miranda, 167, lojas 1 e 2, Maria Goretti, BH/MG - CEP: 31930-490 <BR>
+                    Fone: (31) 3142-5141 | (31) 3646-6433 | (31) 98403-0911 
+                    <span class="instagram">instagram.com/consultorioodontoaline</span>
                 </div>
             </div>
 
@@ -303,17 +317,8 @@ document.getElementById("print-button").addEventListener("click", function () {
                 <div class="col-6" id="img-assinatura">
                     <p><img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura"></p>
                 </div>
-
-                
             </div>
 
-            <div class="row">
-                <div class="col-12" id="endereco">
-                    Rua Edson Luiz de Miranda, 167, lojas 1 e 2, Maria Goretti, BH/MG - CEP: 31930-490 <BR>
-                    Fone: (31) 3142-5141 | (31) 3646-6433 | (31) 98403-0911 
-                    <span class="instagram">instagram.com/consultorioodontoaline</span>
-                </div>
-            </div>
         </div>
         
     </body>

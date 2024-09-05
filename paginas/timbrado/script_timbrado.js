@@ -61,65 +61,103 @@ document.getElementById("print-button").addEventListener("click", function () {
                     margin: 0;
                     padding: 0;
                 }
+
                 .container {
                     width: 100vw;
                     height: 100vh;
                     border-radius: 10px;
                     box-shadow: 5px 5px 3px rgba(0,0,0,0.4); 
                 }
+
                 .title {
-                    font-size: 19px; 
+                    font-size: 22px;
+                    color: #0158A4;
+                    margin-top: 35px; 
                     font-weight: bold;
                     text-transform: uppercase;
                     text-align: center;
                 }
+
                 .header {
-                    display: flex;
-                    justify-content: space-between;  
-                    background-color: #0158a4;
                     margin-bottom: 25px;
-                    border-radius: 10px 10px 0 0;
                 }
-                .img{
-                    display: inline;
-                    width: 300px;
-                    margin-right: 20px;
-                    height: 130px;
+                
+                .img1{
+                    display: block;
+                    width: 350px;
+                    height: 150px;
+                    position: absolute;
+                    margin: 20px 0px 20px 20px;
                 }
+                    
+                .img2{
+                    display: block;
+                    width: 450px;
+                    height: 88px;
+                    position: absolute;
+                    margin: 55px 0px 55px 510px;
+                }
+                        
+                .background {
+                    display: flex;
+                    margin-top: 0;
+                    position: static;
+                    width: 1000px;
+                    height: 191px;
+                    z-index: -1;
+                }
+                        
+                .imagem_fundo {
+                    position: absolute;
+                    width: 600px;
+                    z-index: -10;
+                    margin: 200px 0px 0px 400px;
+                }
+
                 .content {
-                    font-size: 16px; 
-                    margin-top: 10px; 
+                    font-size: 20px;
+                    margin-top: 10px;
+                    color: #0158A4;
                     text-align: justify;
                     padding: 50px;
+                    line-height: 30px;
                 }
-                #imagem-fundo {
-                    position: absolute;
-                    background: url("/images/Timbrado/Background-png.svg") bottom right no-repeat;
-                    background-color: #fff;
-                    background-size: 260px;
-                }
+
                 .assinatura{
                     text-align: center;
                 }
+
                 .img-assinatura{
                     position: relative;
-                    width: 150px;
+                    width: 240px;
                     margin: 0 auto;
                 }
+
                 .data{
+                    margin_top: 35px;
                     text-align: center;
+                    font-size: 20px;
+                    color: #0158A4;
                 }
+
             </style>
         </head>
         <body>
-            <div class="container" id="imagem-fundo">
+            <div class="container">
                 <div class="header">
-                    <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img">
-                    <img src="/images/Timbrado/Endereco.svg" alt="Endereço" class="img">
+                    <img src="/images/Timbrado/Logotipo.svg" alt="Logotipo" class="img1">
+                    <img src="/images/Timbrado/Endereco_bg.svg" alt="Endereço" class="img2">
+                    <img src="/images/Timbrado/fundo_azul_bg.svg" alt="Logotipo" class="background">
                 </div>
-                        <div class="title">${escapeHtml(titulo)}</div>
-                        <div class="content">${escapeHtml(texto)}</div>
-                        <div class="data">${formattedDate}</div>
+
+                <div>
+                    <img src="/images/Timbrado/Background-png.svg" alt="imagem de fundo" class="imagem_fundo">
+                </div>
+
+                <div class="title">${escapeHtml(titulo)}</div>
+                <div class="content">${escapeHtml(texto)}</div>
+                <div class="data">Belo Horizonte, ${formattedDate}</div>
+                
                 <div class="assinatura">
                     <img src="/images/Timbrado/Assinatura.svg" alt="Assinatura" class="img-assinatura">
                 </div>
